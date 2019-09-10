@@ -1,9 +1,7 @@
 
-from qutebrowser.commands import userscripts, runners
 from qutebrowser.api import cmdutils
 from qutebrowser.utils import (message, usertypes, log, qtutils, urlutils,
                                objreg, utils, standarddir, debug)
-from qutebrowser.misc import objects
 
 from os import path
 import tempfile
@@ -16,7 +14,7 @@ import json
 @cmdutils.argument('prefix')
 def shell_send(self, close=False, prefix='', quiet=False):
 	''' Executes program with current selection as stdin (may be none)'''
-	maybeshell = '' if close else ' && $SHELL'
+	maybeshell = '' if close else ' ; $SHELL'
 
 	def _question_callback(program):
 		def _selection_callback(text):

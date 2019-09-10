@@ -1,7 +1,7 @@
 This is a little plugin for [qutebrowser](https://github.com/qutebrowser/qutebrowser)
 
-It add a `shell-send` command to qutebrowser that sends currently selected text to a shell process  
-It will execute `x-terminal-emulator-exe "@ARGS ; bash"`  
+It adds a `shell-send` command to qutebrowser that sends currently selected text to a shell process  
+It will execute `x-terminal-emulator-exe "<args> ; $SHELL"`  
 
 # HOWTO
 
